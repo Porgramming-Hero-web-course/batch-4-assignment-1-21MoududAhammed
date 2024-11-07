@@ -1,0 +1,8 @@
+// Write a generic function getProperty that takes an object and a property name as arguments and returns the property value. Add a constraint to ensure the property name exists on the object.
+
+function getProperty<T extends object, K extends keyof T>(value: T, targetedKey: K): T[K]{
+    return value[targetedKey];
+}
+
+const person = { name: "Alice", age: 30 };
+console.log(getProperty(person, "name"));
