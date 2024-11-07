@@ -1,17 +1,15 @@
-// Create a TypeScript function called countWordOccurrences that accepts a sentence (string) and a word (string). The function should return the number of times the word appears in the sentence, ignoring case. Use the simple sentence without punctuation as input.
+// Create a TypeScript function removeDuplicates that accepts an array of numbers and returns a new array with duplicates removed. Preserve the original order of elements.
 
-function countWordOccurrences(sentence: string, word: string): number {
-  const wordsOfString: string[] = sentence.split(" ");
-  let count: number = 0;
-  wordsOfString.forEach((item: string) => {
-    if (item.toLowerCase() === word.toLocaleLowerCase()) {
-      count += 1;
+function removeDuplicates(arrayOfNum: number[]): number[] {
+  const myNum: number[] = [];
+
+  arrayOfNum.forEach((item) => {
+    if (!myNum.includes(item)) {
+      myNum.push(item);
     }
   });
-
-  return count;
+  return myNum;
 }
 
-const dialog: string = "happy holly Happy bangladesh happy party";
-const result: number = countWordOccurrences(dialog, "happy");
+const result : number[] = removeDuplicates([1, 2, 2, 3, 4, 4, 5]);
 console.log(result);

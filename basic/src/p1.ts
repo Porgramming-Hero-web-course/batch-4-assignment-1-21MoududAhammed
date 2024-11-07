@@ -1,8 +1,8 @@
-// Create a TypeScript function removeDuplicates that accepts an array of numbers and returns a new array with duplicates removed. Preserve the original order of elements.
+// Write a TypeScript function sumArray that takes an array of numbers and returns the sum of all elements in the array.
 
 function sumArray(arrayOfNum: number[]): number {
   let sum: number = 0;
-  arrayOfNum.forEach((item: number): number => (sum += item));
+  arrayOfNum.forEach((item)=> (sum += item));
 
   return sum;
 }
